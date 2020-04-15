@@ -1,0 +1,47 @@
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `Housedetails`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Rentaldetails`
+--
+
+DROP TABLE IF EXISTS `Rentaldetails`;
+CREATE TABLE IF NOT EXISTS `rentaldetails` (
+  `name` varchar(30) NOT NULL,
+  `ownername` varchar(10) NOT NULL,
+  `address` varchar(50) NOT NULL,
+  `flattype` varchar(5) NOT NULL,
+  `flatarea` int(10) NOT NULL,
+  `rent` int(10) NOT NULL,
+  `phonenumber` varchar(10) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `Rentaldetails`
+--
+
+INSERT INTO `Rentaldetails` (`name`, `ownername`, `address`, `flattype`, `flatarea`, `rent`, `phonenumber`) VALUES
+('joseph apartments', 'joseph', 'bhimavarm', '1BHK', 3000, 30000, '9872291155'),
+('raju apartments', 'Rakesh', 'lakshmipuram', '2BHK', 4000, 42000, '9959954553'),
+('mariyamma apartments', 'Raj', 'pallepalem', '3BHK', 5000, 55000, '9966524489'),
+('rajesh apartments', 'kittu', 'Kanigiri', '1BHK', 1000, 10000, '9515831866'),
+('ramesh apartments', 'hari', 'losari', '2BHK', 2000, 30000, '995994447'),
+('nani apartments', 'dev', 'laku', '3BHK', 3000, 40000, '9849435878'),
+('keerthana apartments', 'ram', 'perualem', '1BHK', 1000, 15000, '9963485987'),
+('priyanka apartments', 'nani', 'narasapuram', '2BHK', 2000, 32000, '9872548113'),
+('krishna apartments', 'josh', 'gollapalem', '3BHK', 3000, 41000, 7671994448');
+COMMIT;
